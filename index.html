@@ -1,5 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Website Redirects</title>
+</head>
+<body>
+  <script>
+    var host = window.location.host;
+    var redirectURL;
+    if (host === 'pics.yourdomain.com') {
+      redirectURL = 'https://drive.google.com/drive/u/8/folders/139PSG7MMRsLu1JG17jrffUI2rUyrHQhi';
+    } else if (host === 'refs.yourdomain.com') {
+      redirectURL = 'references.pdf';
+    } else {
+      redirectURL = 'https://www.amazon.com/Nine-Noon-Workday-Uber-Wealthy-Americans/dp/1794566856';
+    }
+    
+    // Perform the redirection
+    window.location.href = redirectURL;
+  </script>
+</body>
+</html>
+
+
 <html>
     <head>
-        <meta http-equiv="refresh" content="0; url=https://drive.google.com/drive/u/8/folders/139PSG7MMRsLu1JG17jrffUI2rUyrHQhi">
+        <meta http-equiv="refresh" content="0; url=">
     </head>
 </html>
