@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Website Redirects</title>
+  <title>Nine to Noon Secrets</title>
 </head>
 <body>
   <script>
@@ -12,10 +12,10 @@
       redirectURL = "https://drive.google.com/drive/u/8/folders/139PSG7MMRsLu1JG17jrffUI2rUyrHQhi";
     } else if (host === "refs.ninetonoonsecrets.com") {
       redirectURL = "references.pdf";
-    } else {
+    } else { // Mod here
       redirectURL = "https://www.amazon.com/Nine-Noon-Workday-Uber-Wealthy-Americans/dp/1794566856";
     }
-    window.location.href = redirectURL;
+    redirectURL ? window.location.href = redirectURL : null;
   </script>
 </body>
 </html>
