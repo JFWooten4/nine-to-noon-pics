@@ -22,7 +22,7 @@
     };
     if (redirects[host]) {
       if (typeof redirects[host] === "object") {
-        redirectURL = redirects[host][path] || defaultRedirectURL;
+        redirectURL = redirects[host][path] || redirectURL;
       } else {
         redirectURL = redirects[host];
       }
