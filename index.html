@@ -20,12 +20,10 @@
         "/free-book": "manuscript.pdf"
       }
     };
-    if (redirects[host]) {
-      if (typeof redirects[host] === "object") {
-        redirectURL = redirects[host][path] || redirectURL;
-      } else {
-        redirectURL = redirects[host];
-      }
+    if (path) {
+      redirectURL = redirects[host][path] || redirectURL;
+    } else {
+      redirectURL = redirects[host] || redirectURL;
     }
     redirectURL ? window.location.href = redirectURL : null;
   </script>
