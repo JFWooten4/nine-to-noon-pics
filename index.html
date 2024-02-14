@@ -8,7 +8,7 @@
   <script>
     var host = window.location.host;
     var path = window.location.pathname;
-    var redirectURL = "https://www.amazon.com/Nine-Noon-Workday-Uber-Wealthy-Americans/dp/1794566856?&_encoding=UTF8&tag=wootenwealth-20&linkCode=ur2&linkId=ef410b20eb097b54e3e3eef7ee02322a&camp=1789&creative=9325";
+    var URL = "https://www.amazon.com/Nine-Noon-Workday-Uber-Wealthy-Americans/dp/1794566856?&_encoding=UTF8&tag=wootenwealth-20&linkCode=ur2&linkId=ef410b20eb097b54e3e3eef7ee02322a&camp=1789&creative=9325";
     var redirects = {
       "pics.ninetonoonsecrets.com": "pictures.pdf",
       "refs.ninetonoonsecrets.com": "references.pdf",
@@ -21,11 +21,11 @@
       }
     };
     if (path) {
-      redirectURL = redirects[host][path] || redirectURL;
+      URL = redirects[host][path] || URL;
     } else {
-      redirectURL = redirects[host] || redirectURL;
+      URL = redirects[host] || URL;
     }
-    redirectURL ? window.location.href = redirectURL : null;
+    redirectURL ? window.location.href = URL : null;
   </script>
 </body>
 </html>
