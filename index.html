@@ -7,25 +7,18 @@
 <body>
   <script>
     var host = window.location.host;
-    var redirectURL;
-    if (host === "pics.ninetonoonsecrets.com") {
-      redirectURL = "pictures.pdf";
-    } else if (host === "refs.ninetonoonsecrets.com") {
-      redirectURL = "references.pdf";
-    } else if (host === "abcd.ninetonoonsecrets.com") {
-      redirectURL = "https://www.youtube.com/watch?v=0mTU0x8Saak";
-    } else if (host === "drs.ninetonoonsecrets.com") {
-      redirectURL = "https://www.youtube.com/playlist?list=PLD_o9ntBnmGaSraKlePO35JwWLvr2dl0r";
-    } else if (host === "jake.ninetonoonsecrets.com") {
-      redirectURL = "https://www.listennotes.com/podcasts/the-stock-market/special-trader-interview-R8bYXyetNrl";
-    } else if (host === "biz.ninetonoonsecrets.com") {
-      redirectURL = "https://www.clickfunnels.com/sign-up-flow?aff=db3a41ecb8fcfa56c5a53a5f8503612a9e8dd4f1129d8f0a2ca5c3ab2af10bd7-1WzEwLDUzNTI0XQe";
-    } else if (host === "www.ninetonoonsecrets.com/free-book") {
-      redirectURL = "manuscript.pdf";
-    } else {
-      redirectURL = "https://www.amazon.com/Nine-Noon-Workday-Uber-Wealthy-Americans/dp/1794566856?&_encoding=UTF8&tag=wootenwealth-20&linkCode=ur2&linkId=ef410b20eb097b54e3e3eef7ee02322a&camp=1789&creative=9325";
-    }
-    redirectURL ? window.location.href = redirectURL : null;
+    var path = window.location.pathname;
+    var URL = "https://www.amazon.com/Nine-Noon-Workday-Uber-Wealthy-Americans/dp/1794566856?&_encoding=UTF8&tag=wootenwealth-20&linkCode=ur2&linkId=ef410b20eb097b54e3e3eef7ee02322a&camp=1789&creative=9325";
+    var redirects = {
+      "pics.ninetonoonsecrets.com": "pictures.pdf",
+      "refs.ninetonoonsecrets.com": "references.pdf",
+      "abcd.ninetonoonsecrets.com": "https://www.youtube.com/watch?v=0mTU0x8Saak",
+      "drs.ninetonoonsecrets.com": "https://www.youtube.com/playlist?list=PLD_o9ntBnmGaSraKlePO35JwWLvr2dl0r",
+      "jake.ninetonoonsecrets.com": "https://www.listennotes.com/podcasts/the-stock-market/special-trader-interview-R8bYXyetNrl",
+      "biz.ninetonoonsecrets.com": "https://www.clickfunnels.com/sign-up-flow?aff=db3a41ecb8fcfa56c5a53a5f8503612a9e8dd4f1129d8f0a2ca5c3ab2af10bd7-1WzEwLDUzNTI0XQe"
+    };
+    var URL = redirects[host];
+    window.location = URL
   </script>
 </body>
 </html>
