@@ -18,7 +18,7 @@
       "biz.ninetonoonsecrets.com": "https://www.clickfunnels.com/sign-up-flow?aff=db3a41ecb8fcfa56c5a53a5f8503612a9e8dd4f1129d8f0a2ca5c3ab2af10bd7-1WzEwLDUzNTI0XQe",
       "review.ninetonoonsecrets.com": "https://amzn.to/3OOk3AG"
     };
-    var URL = redirects[host];
+    var URL = redirects[host] || URL;
     window.location = URL
   </script>
 </body>
