@@ -7,7 +7,6 @@
 <body>
   <script>
     var host = window.location.host;
-    var path = window.location.pathname;
     var URL = "https://www.amazon.com/Nine-Noon-Workday-Uber-Wealthy-Americans/dp/1794566856?&_encoding=UTF8&tag=wootenwealth-20&linkCode=ur2&linkId=ef410b20eb097b54e3e3eef7ee02322a&camp=1789&creative=9325";
     var redirects = {
       "pics.ninetonoonsecrets.com": "pictures.pdf",
@@ -19,7 +18,7 @@
       "review.ninetonoonsecrets.com": "https://amzn.to/3OOk3AG"
     };
     var URL = redirects[host] || URL;
-    window.location = URL
+    window.location.href = URL;
   </script>
 </body>
 </html>
